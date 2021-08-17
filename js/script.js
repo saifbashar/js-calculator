@@ -30,5 +30,6 @@ function changeTheme() {
     document.getElementById('dark').innerText = 'Light Mode';
   } else {
     theme.setAttribute('href', './style/style.css');
+    document.getElementById('dark').innerText = 'Dark Mode';
   }
 }
