@@ -23,6 +23,7 @@ equal.addEventListener('click', function () {
 
 clear.addEventListener('click', function () {
   display.innerText = 0;
+  displaySum.innerText = 0;
 });
 function changeTheme() {
   if (theme.getAttribute('href') == './style/style.css') {
