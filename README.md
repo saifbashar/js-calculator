@@ -6,7 +6,8 @@
 A Calculator App with dark mode. Built using HTML, CSS and JavaScript. Feel free to check out the code and don't forget to star the repo.⭐
 
 
-<b>Light Mode</b>
+<b style="text-align:center">Light Mode</b>
 
 <img src="2021-08-18-00-29-saifbashar.github.io.png">
+<b style="text-align:center">Dark Mode</b>
 <img src="2021-08-18-00-33-saifbashar.github.io.png">
