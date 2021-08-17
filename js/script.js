@@ -27,6 +27,7 @@ clear.addEventListener('click', function () {
 function changeTheme() {
   if (theme.getAttribute('href') == './style/style.css') {
     theme.setAttribute('href', './style/dark.css');
+    document.getElementById('dark').innerText = 'Light Mode';
   } else {
     theme.setAttribute('href', './style/style.css');
   }
