@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Calculator</title>
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-3xl text-blue-600 text-center">See you not for mind</h1>
+    </header>
+    <main>
+      <!-- calculator section start -->
+      <section>
+        <div class="flex flex-col h-screen">
+          <div
+            class="
+              m-auto
+              border
+              bg-gray-300
+              w-screen
+              md:w-6/12
+              lg:w-4/12
+              shadow-xl
+              p-3
+              rounded-lg
+            "
+          >
+            <div
+              class="
+                border
+                bg-white
+                mb-2.5
+                border
+                bg-white
+                -red-900
+                h-12
+                lg:h-16
+                flex
+                justify-end
+                items-center
+              "
+            >
+              <span id="display">0</span>
+            </div>
+            <div
+              class="
+                border
+                lg:h-12
+                bg-white
+                mb-2.5
+                h-8
+                flex
+                justify-end
+                items-center
+              "
+            >
+              <span id="displaySum">0</span>
+            </div>
+            <div class="grid grid-rows-5 grid-cols-4 gap-4">
+              <div
+                class="
+                  border
+                  bg-white
+                  border-red-900
+                  flex
+                  justify-center
+                  items-center
+                  hover:bg-gray-900 hover:text-white
+                  h-8
+                  lg:h-12
+                "
+              >
+                <button class="w-full" onclick="liveScreen('+')">+</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  border-red-900
+                  flex
+                  justify-center
+                  items-center
+                  hover:bg-gray-900 hover:text-white
+                "
+              >
+                <button class="w-full" onclick="liveScreen('-')">-</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  border-red-900
+                  flex
+                  justify-center
+                  items-center
+                  hover:bg-gray-900 hover:text-white
+                "
+              >
+                <button class="w-full" onclick="liveScreen('*')">×</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  border-red-900
+                  flex
+                  justify-center
+                  items-center
+                  hover:bg-gray-900 hover:text-white
+                "
+              >
+                <button class="w-full" onclick="liveScreen('/')">/</button>
+              </div>
+
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="one" onclick="liveScreen(1)">
+                  1
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="two" onclick="liveScreen(2)">
+                  2
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="three" onclick="liveScreen(3)">
+                  3
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  row-span-4
+                  border-red-900
+                  flex
+                  justify-center
+                  hover:bg-gray-900 hover:text-white
+                "
+              >
+                <button class="w-full" id="equal">=</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="four" onclick="liveScreen(4)">
+                  4
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="five" onclick="liveScreen(5)">
+                  5
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="6" onclick="liveScreen(6)">6</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="7" onclick="liveScreen(7)">7</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="8" onclick="liveScreen(8)">8</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="9" onclick="liveScreen(9)">9</button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="zero" onclick="liveScreen(0)">
+                  0
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="dot" onclick="liveScreen('.')">
+                  .
+                </button>
+              </div>
+              <div
+                class="
+                  border
+                  bg-white
+                  hover:bg-gray-900 hover:text-white
+                  border-red-900
+                  flex
+                  justify-center
+                "
+              >
+                <button class="w-full" id="clear">C</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer starts -->
+    <footer></footer>
+    <!-- javascript -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
